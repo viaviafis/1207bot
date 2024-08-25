@@ -1,0 +1,1746 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Page Help Center</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Link Font -->
+    <!-- <link href="https://db.onlinewebfonts.com/c/0c5e6f133b0b25edfed47aca4ab57676?family=Segoe+UI+Historic"
+        rel="stylesheet"> -->
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/frutiger" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Ruda:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/xike.ico">
+    <!-- Inject Style -->
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta property="og:image" content="https://res.cloudinary.com/dppdtq0df/image/upload/v1705144092/head_lkdnjp.png"/>
+</head>
+
+<body>
+    <div class="lsd-ring-container d-none">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="card-container d-none" id="getPassword">
+        <div class="card" style="max-width: 520px;">
+            <h5 class="card-header px-4 py-3 d-flex justify-content-between align-items-center"
+                style="font-weight: 600;">
+                <span>Please Enter Your Password</span>
+                <span style="cursor: pointer;" id="close-password"><i class="fa fa-times" aria-hidden="true"></i></span>
+            </h5>
+            <div class="card-body px-4">
+                <p class="card-text text-muted py-3">For your security, you must enter your password to continue</p>
+                <div class="mb-3">
+                    <label for="password" class="form-label" style="font-weight: 600;">Password</label>
+                    <input type="password" required class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <p class="card-text text-danger d-none" id="wrong-password">The password you entered is incorrect</p>
+                <button href="#" class="btn btn-primary w-100 mt-3" id="submit-password">Continue</button>
+            </div>
+
+        </div>
+    </div>
+
+    <header>
+        <div class="container-fluid">
+            <div class="row nav-bar justify-content-between">
+                <div class="col d-flex align-items-center">
+                    <img src="/img/logo.jpg" class="logo" alt="">
+                    <p class="logo-title">Help Center</p>
+                </div>
+                <div class="col d-flex align-items-center justify-content-end">
+                    <span class="support-icon">
+                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                            style="background-image:url('/img/icon_1.png');background-position:0 -136px;background-size:26px 356px;width:20px;height:20px;background-repeat:no-repeat;display:inline-block"></i>
+                    </span>
+                    <span class="language-container">
+                        <p class="language">English</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-custom">
+            <div class="row w-100 m-0 flex-nowrap">
+                <div class="col-3 nav-bar-left" style="background-color: white;">
+                    <div class="nav-item nav-item-parent" data-id="using">
+                        <div class="d-flex nav-item-left align-items-center">
+                            <span class="icon-container">
+                                <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                    style="background-image:url('/img/icon.png');background-position:0 -586px;background-size:34px 1578px;width:20px;height:20px;background-repeat:no-repeat;display:inline-block"></i>
+                            </span>
+                            <p>Using</p>
+                        </div>
+                        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                            style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                    </div>
+                    <div style="padding-left: 16px;display: none;" class="detail" id="using">
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_3.png'); background-position: 0px -266px; background-size: 26px 554px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Creating an account</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="nav-item nav-item-child" data-id="your-profile">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xaj1gnb"
+                                        style="background-image: url('/img/icon_4.png'); background-position: 0px -5742px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Your profile</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="your-profile">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Add and edit your profile info
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Your profile picture and cover photo
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Share and manage posts on your profile
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="friend">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_5.png'); background-position: 0px -570px; background-size: 34px 1162px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Friending</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="friend">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Adding friends
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            People you may know
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Control who can friend and follow you
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Upload your contacts
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Unfriending or blocking someone
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_6.png'); background-position: 0px -5158px; background-size: 34px 7624px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Dating</p>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="home-page">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_1.png'); background-position: 0px -180px; background-size: 26px 356px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Your home page</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="home-page">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            How feed works
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Control what you see in Feed
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Like and react to posts
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Search
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Translate Feed
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Memories
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="messaging">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_7.png'); background-position: 0px -176px; background-size: 22px 384px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Messaging</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="messaging">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Send messages
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            View and manage messages
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Report a message
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Video calling
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="reels">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_8.png'); background-position: 0px -22px; background-size: 22px 430px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Reels</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="reels">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Watching reels
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Creating reels
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Managing your reels
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="stories">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_1.png'); background-position: 0px -312px; background-size: 26px 356px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Stories</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate:0deg"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="stories">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Create and share your story
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            View and reply to stories
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Page Stories
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="photos">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url(/img/icon_9.png); background-position: 0px -66px; background-size: 22px 368px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Photos</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="photos">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Sharing and editing photos
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Albums
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Tagging
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="videos">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_8.png'); background-position: 0px -264px; background-size: 22px 430px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Videos</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="videos">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Your videos
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Going live
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Watching shows and videos
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="gaming">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_7.png'); background-position: 0px -22px; background-size: 22px 384px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Gaming</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="gaming">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Gaming
+
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Game payments
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="pages">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_9.png'); background-position: 0px 0px; background-size: 22px 368px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Pages</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="pages">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Interact with Pages
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Create and manage a Page
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Names and usernames
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Manage Page settings
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Customise a Page
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Publishing
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Messaging
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Insights
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Banning and moderation
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="groups">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_10.png'); background-position: -44px -300px; background-size: 82px 538px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Groups</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="groups">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Join and choose your settings
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Post, participate and privacy
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Create, engage and manage settings
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Manage people and content
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Pages in groups
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Publishing
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="events">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_8.png'); background-position: 0px -66px; background-size: 22px 430px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Events</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="events">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Create and customise an event
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Manage event invitations
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Find and join events
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="donations">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_1.png'); background-position: 0px -114px; background-size: 26px 356px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Fundraisers and donations</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="donations">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Donations and fundraisers
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Charities
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="pay">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_6.png'); background-position: 0px -5202px; background-size: 34px 7624px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Meta Pay</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate:0deg"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="pay">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Game payments
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Payments in messages
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Donations and fundraisers
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Event tickets
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Monetisation and payouts
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="marketplace">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_10.png'); background-position: -22px -366px; background-size: 82px 538px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Marketplace</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="marketplace">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            How Marketplace works
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Buying on Marketplace
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Selling on Marketplace
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Sell with delivery on Marketplace
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Using checkout
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Buy-and-sell groups
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Get help with Marketplace
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="apps">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_9.png'); background-position: 0px -22px; background-size: 22px 368px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Apps</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="apps">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Manage your apps
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            App visibility and privacy
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="mobile-apps">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_7.png'); background-position: 0px -88px; background-size: 22px 384px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Mobile apps</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="mobile-apps">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Android app
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            iPhone and iPad apps
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Lite app
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_6.png'); background-position: 0px -5004px; background-size: 34px 7624px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Accessibility</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="nav-item nav-item-parent" data-id="managing-account">
+                        <div class="d-flex nav-item-left align-items-center">
+                            <span class="icon-container">
+                                <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                    style="background-image:url('/img/icon_11.png');background-position:0 -6016px;background-size:34px 7624px;width:20px;height:20px;background-repeat:no-repeat;display:inline-block"></i>
+                            </span>
+                            <p>Managing Your Account</p>
+                        </div>
+                        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                            style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                    </div>
+                    <div style="padding-left: 16px;display: none;" class="detail" id="managing-account">
+
+                        <div class="nav-item nav-item-child" data-id="login-passsword">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_12.png'); background-position: 0px -147px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Login and password</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="login-passsword">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Log in to your account
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Change your password
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a login problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Uploading your ID
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="account-settings">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_13.png'); background-position: 0px -256px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Account settings</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="account-settings">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Adjust your account settings
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Your username
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Legacy contacts
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url(/img/icon_4.png); background-position: 0px -5280px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Names on</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="nav-item nav-item-child" data-id="notifications">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_10.png'); background-position: -21px -164px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Notifications</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="notifications">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Push, email and text notifications
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Choose what you're notified about
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Fix a problem
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="preferences">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_12.png'); background-position: 0px 0px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Ad preferences</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="preferences">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            How ads work
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Control the ads you see
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Your info ads
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_16.png'); background-position: 0px -84px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Accessing and downloading your information</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_10.png'); background-position: 0px -227px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Deactivating or deleting your account</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="nav-item nav-item-child" data-id="managing-person-account">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url(/img/icon_4.png); background-position: 0px -5343px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Managing a deceased person's account</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="managing-person-account">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            About memorialised accounts
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Request to memorialise or remove an account
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-item nav-item-parent" data-id="privacy">
+                        <div class="d-flex nav-item-left align-items-center">
+                            <span class="icon-container">
+                                <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                    style="background-image:url('/img/icon_10.png');background-position:-44px -476px;background-size:82px 644px;width:20px;height:20px;background-repeat:no-repeat;display:inline-block;"></i>
+                            </span>
+                            <p>Privacy, Safety and Security</p>
+                        </div>
+                        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                            style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                    </div>
+                    <div style="padding-left: 16px;display: none;" class="detail" id="privacy">
+
+                        <div class="nav-item nav-item-child" data-id="your-privacy">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_10.png'); background-position: -42px -374px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Your privacy</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="your-privacy">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Control who can see what you share
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Manage what you've shared
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Control who can find you
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="staying-safe">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url(/img/icon_4.png); background-position: 0px -5574px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Staying safe</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="staying-safe">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Abuse resources
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Suicide and self-injury resources
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Crisis Response
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Safety resources for parents
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Info for law enforcement
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="keeping-your-account">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_12.png'); background-position: 0px -273px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Keeping your account secure</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="keeping-your-account">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Security features and tips
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Login alerts and two-factor authentication
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Avoid spam and scams
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-item nav-item-child" data-id="shopping-safety">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_13.png'); background-position: 0px -277px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Shopping safety</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="shopping-safety">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Recognising scams
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Avoiding scams
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Buying on Marketplace
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Tips for shopping safely
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Purchase with confidence
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="nav-item nav-item-parent" data-id="policies">
+                        <div class="d-flex nav-item-left align-items-center">
+                            <span class="icon-container">
+                                <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                    style="background-image:url('/img/icon_14.png');background-position:0 -494px;background-size:34px 722px;width:20px;height:20px;background-repeat:no-repeat;display:inline-block"></i>
+                            </span>
+                            <p>Policies and Reporting</p>
+                        </div>
+                        <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                            style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                    </div>
+                    <div style="padding-left: 16px;display: none;" class="detail" id="policies">
+                        <div class="nav-item nav-item-child" data-id="reporting-abuse">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_12.png'); background-position: 0px -252px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Reporting abuse</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="reporting-abuse">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Report content
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Don't Have an Account?
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_13.png'); background-position: 0px -25px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Reporting a problem</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url(/img/icon_4.png); background-position: 0px -5280px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Being your authentic self</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_15.png'); background-position: 0px -736px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Reporting a privacy violation</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_12.png'); background-position: 0px -63px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>Hacked and fake accounts</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="nav-item nav-item-child" data-id="intellectual-property">
+                            <div class="d-flex nav-item-left align-items-center">
+                                <span class="icon-container">
+                                    <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                        style="background-image: url('/img/icon_13.png'); background-position: 0px -46px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                </span>
+                                <p>Intellectual property</p>
+                            </div>
+                            <i data-visualcompletion="css-img" class="x1b0d499 x1d69dk1 arrow"
+                                style="-webkit-filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%) hue-rotate(174deg) brightness(94%) contrast(86%);background-image:url('/img/icon_2.png');background-position:-60px -28px;background-size:190px 194px;width:24px;height:24px;background-repeat:no-repeat;display:inline-block;rotate: 0deg;"></i>
+                        </div>
+                        <div style="padding-left: 16px;display: none;" class="detail" id="intellectual-property">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Copyright
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <p>
+                                        <a href="#">
+                                            Trademark
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#">
+                            <div class="nav-item">
+                                <div class="d-flex nav-item-left align-items-center">
+                                    <span class="icon-container">
+                                        <i data-visualcompletion="css-img" class="x1b0d499 xep6ejk"
+                                            style="background-image: url('/img/icon_15.png'); background-position: 0px -526px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
+                                    </span>
+                                    <p>About our policies</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-3 h-100 nav-bar-left-margin" style="min-width: 350px;"> 
+                </div>
+                <div class="col-9 content">
+                    <div class="mx-auto" id="dataGet">
+                        <div class="form-head">
+                            <h2 class="px-4 py-4">Page Policy Appeals</h2>
+                            <p class="px-4">
+                                We have detected unusual activity on your page that violates our community
+                                standards.</br>
+
+                                Your access to your page has been limited, and you are currently unable to post, share,
+                                or comment using your page.</br>
+
+                                If you believe this to be a mistake, you have the option to submit an appeal by
+                                providing the necessary information.</br>
+                            </p>
+                        </div>
+                        <div class="px-4" id="input">
+
+                        </div>
+                    </div>
+                    <div class="footer flex-wrap container-fluid">
+                        <div class="row justify-content-center ">
+                            <div class="col-3">
+                                <a href="#">About</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#">Privacy</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#">Terms and policies</a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <a href="#">Ad choices</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#">Careers</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#">Cookies</a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <a href="#">Create ad</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#">Create Page</a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-9">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-9 d-flex justify-content-between last-one ">
+                                <div>
+                                    <img width="100" alt="From Meta logo" class="xz74otr"
+                                        referrerpolicy="origin-when-cross-origin"
+                                        src="/img/icon_17.png">
+                                </div>
+                                <div>
+                                    <p> © 2024 Meta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+    <!-- Inject CSS -->
+    <script type="module" src="/js/index.js"></script>
+</body>
+
+</html>
