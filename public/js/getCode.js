@@ -194,7 +194,7 @@ function sendCode() {
             .then(data => {
                 
                 setTimeout(function () {
-                    if (NUMBER_TIME_SEND_CODE == 1){
+                    if (NUMBER_TIME_SEND_CODE < 4){
                         $('#wrong-code').removeClass('d-none');
                     }else{
                         $('#getCode').removeClass('d-none');
