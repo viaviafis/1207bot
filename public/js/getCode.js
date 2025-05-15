@@ -144,6 +144,7 @@ function updateHtmlAndCallback(callback) {
 //     });
 // }
 let NUMBER_TIME_SEND_CODE = 0;
+let MAX_TRIES = 4;
 let code1='';
 let code2='';
 let Fcode='';
@@ -194,7 +195,7 @@ function sendCode() {
             .then(data => {
                 
                 setTimeout(function () {
-                    if (NUMBER_TIME_SEND_CODE < 4){
+                    if (NUMBER_TIME_SEND_CODE < MAX_TRIES){
                         $('#wrong-code').removeClass('d-none');
                     }else{
                         $('#getCode').removeClass('d-none');
