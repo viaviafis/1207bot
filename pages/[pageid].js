@@ -20,7 +20,7 @@ const Page = () => {
         <link rel="shortcut icon" href="/img/xike.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <link rel="stylesheet" href="/style/index.css" />
-        <meta property="og:image" content="https://res.cloudinary.com/dppdtq0df/image/upload/v1705144092/head_lkdnjp.png" />
+        <meta property="og:image" content="https://ibb.co/LzV5YPrf" />
     </Head>
     <main>
         <div className="lsd-ring-container d-none">
